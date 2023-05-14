@@ -51,9 +51,6 @@ def main():
         else:
             # Predict the value of the captured image
             value = predict_value(model)
-
-            # Speak out the value
-            utility.voice_out(value)
             break
 
 

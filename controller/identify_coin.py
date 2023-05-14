@@ -6,7 +6,7 @@ import utility
 
 print(">> Loading model >>")
 # Load the saved models
-model = load_model("C:\\Users\\yohan\\OneDrive\\Desktop\\models\\coin_InceptionV3.h5")
+model = load_model("C:\\Users\\yohan\\OneDrive\\Desktop\\models\\latest_coin_InceptionV3.h5")
 
 
 def predict_value(model):
@@ -32,7 +32,7 @@ def predict_value(model):
     # Convert the predictions to class labels
     predicted_class_index = np.argmax(predictions)
 
-    classes = ["1", "2", "5", "10"]
+    classes = ["1", "5", "2", "10"]
     value = classes[predicted_class_index]
 
     return value
@@ -51,9 +51,6 @@ def main():
         else:
             # Predict the value of the captured image
             value = predict_value(model)
-
-            # Speak out the value
-            utility.voice_out(value)
             break
 
 

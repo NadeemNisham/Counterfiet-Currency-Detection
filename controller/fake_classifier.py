@@ -12,7 +12,7 @@ def fake_classifier(note_value):
     while True:
         arduino.uv_on()
         # Capture an image from the camera
-        if not utility.capture_image("uv"):
+        if not utility.capture_fake():
             continue
         else:
             frame = cv2.imread("uv.jpg")
